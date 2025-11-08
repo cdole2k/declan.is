@@ -1,4 +1,4 @@
-baseURL = 'https://declan.is/'
+baseURL = 'https://cdole2k.github.io/declan.is/'
 languageCode = 'en-us'
 title = "hi! i'm declan!"
 theme = 'hello-friend-ng'
