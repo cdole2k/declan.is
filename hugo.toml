@@ -1,0 +1,36 @@
+baseURL = 'https://declan.is/'
+languageCode = 'en-us'
+title = "hi! i'm declan!"
+theme = 'hello-friend-ng'
+
+ [params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04"
+  
+  # Theme toggle settings
+  defaultTheme = "auto"           # Options: "light", "dark", or "auto"
+  enableThemeToggle = true       # Set to true to show the toggle button
+
+ [params.logo]
+  logoText = "declan.is"
+  logoHomeLink = "/"
+  logoCursorDisabled = true
+  logoMark = " "  # Space prevents default ">" from rendering
+
+[[params.social]]
+  name = "youtube"
+  url = "https://www.youtube.com/@Tantavore"
+
+[[params.social]]
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/chrisdoleary"
+
+[[params.social]]
+  name = "instagram"
+  url = "https://www.instagram.com/declan.ol/"
+
+[[params.social]]
+  name = "substack"
+  url = "https://shadysummers.substack.com/"
