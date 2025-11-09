@@ -1,8 +1,11 @@
 baseURL = 'https://declan.is/'
 languageCode = 'en-us'
 title = "hi! i'm declan!"
-theme = 'hello-friend-ng'
 
+[module]
+  [[module.imports]]
+    path = "github.com/rhazdon/hugo-theme-hello-friend-ng"
+    
  [params]
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
