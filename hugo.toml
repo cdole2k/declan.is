@@ -25,15 +25,24 @@ title = "hi! i'm declan!"
 [[params.social]]
   name = "youtube"
   url = "https://www.youtube.com/@Tantavore"
+  title = "check out my youtube!"
 
 [[params.social]]
   name = "linkedin"
   url = "https://www.linkedin.com/in/chrisdoleary"
+  title = "connect with me on linkedin!"
 
 [[params.social]]
   name = "instagram"
   url = "https://www.instagram.com/declan.ol/"
+  title = "these are my photos!"
 
 [[params.social]]
   name = "substack"
   url = "https://shadysummers.substack.com/"
+  title = "read me here!"
+
+[[params.social]]
+  name = "github"
+  url = "https://github.com/cdole2k"
+  title = "=^_^="
