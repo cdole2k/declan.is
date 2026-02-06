@@ -1,6 +1,6 @@
 ---
 title: "Getting Started with OpenClaw on DigitalOcean"
-date: 2025-02-05
+date: 2026-02-05
 draft: false
 tags: ["agentic-systems", "self-hosting", "telegram", "claude"]
 description: "Setting up an OpenClaw agent harness on DigitalOcean's one-click VPS, with Telegram as the interface channel."

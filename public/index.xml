@@ -6,12 +6,19 @@
     <description>Recent content on hi! i&#39;m declan!</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hardening OpenClaw: Closing the Gaps in the One-Click Deploy</title>
+      <link>http://localhost:1313/posts/openclaw-hardening/</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/openclaw-hardening/</guid>
+      <description>&lt;p&gt;In my last post, I mentioned skipping the manual configuration and planning to &amp;ldquo;come back to hardening later.&amp;rdquo; This is later.&lt;/p&gt;&#xA;&lt;p&gt;I compared my running setup against Grant Harvey&amp;rsquo;s security guide for OpenClaw and found that while DigitalOcean&amp;rsquo;s one-click image made some good choices, it also left the dashboard exposed to the public internet. Given OpenClaw&amp;rsquo;s history with the ClawdBot incident, that felt worth fixing before I connected anything else.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Getting Started with OpenClaw on DigitalOcean</title>
       <link>http://localhost:1313/posts/getting-started-with-openclaw/</link>
-      <pubDate>Wed, 05 Feb 2025 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/getting-started-with-openclaw/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve been wanting to experiment with agentic harnesses for a while, and OpenClaw seemed like a reasonable starting point. That said, the project has a rocky security history that shaped how I approached the deployment.&lt;/p&gt;&#xA;&lt;p&gt;Late last  year, ClawdBot (an OpenClaw-based agent) shipped with exposed credentials and insecure defaults. Attackers found the deployment, gained access, and hijacked it—retrieving API keys, private chat logs, and in some cases driving the agent to take actions against connected services. Not great. Given that context, I wanted a deployment path that minimized my own configuration surface area, at least initially.&lt;/p&gt;</description>
     </item>
