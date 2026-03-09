@@ -6,8 +6,15 @@
     <description>Recent content on hi! i&#39;m declan!</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building a Wholesale Real Estate Platform with Claude Code Overnight</title>
+      <link>http://localhost:1313/posts/building-wholesale-re-with-claude-code/</link>
+      <pubDate>Mon, 09 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/building-wholesale-re-with-claude-code/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been building a wholesale real estate automation platform, the kind of thing that normally takes a small team a few months to scaffold out. Lead ingestion, contract management, buyer matching, compliance gates, SMS campaigns, financial tracking, a React frontend. The full pipeline from motivated seller to closed deal.&lt;/p&gt;&#xA;&lt;p&gt;I built the working prototype in a single overnight session using Claude Code, a bash script, and a well-structured CLAUDE.md file. This post walks through the pattern so you can apply it to your own projects.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Hardening OpenClaw: Closing the Gaps in the One-Click Deploy</title>
       <link>http://localhost:1313/posts/openclaw-hardening/</link>
