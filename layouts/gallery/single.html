@@ -1,0 +1,78 @@
+{{ define "main" }}
+{{ $images := .Resources.ByType "image" }}
+<main class="gallery-page">
+  {{ if $images }}
+  <div class="gallery-grid">
+    {{ range $images }}
+    {{ $safeName := .Name | replaceRE `[^a-zA-Z0-9._-]` "-" }}
+    {{ $img := resources.Copy (printf "gallery/%s" $safeName) . }}
+    {{ $thumb := $img.Resize "800x q80" }}
+    {{ $caption := replace (strings.TrimSuffix (path.Ext .Name) .Name) "-" " " }}
+    <a class="gallery-photo-link" href="{{ .RelPermalink }}" aria-label="{{ $caption }}">
+      <img src="{{ $thumb.RelPermalink }}" alt="{{ $caption }}" loading="lazy">
+      <span class="gallery-photo-caption">{{ $caption }}</span>
+    </a>
+    {{ end }}
+  </div>
+
+  <div class="lightbox" id="lb" role="dialog" aria-modal="true">
+    <span class="lightbox-counter" id="lb-ctr"></span>
+    <button class="lightbox-close" id="lb-close" aria-label="Close">&times;</button>
+    <button class="lightbox-btn lightbox-btn--prev" id="lb-prev" aria-label="Previous">&#8592;</button>
+    <button class="lightbox-btn lightbox-btn--next" id="lb-next" aria-label="Next">&#8594;</button>
+    <div class="lightbox-body">
+      <img class="lightbox-img" id="lb-img" src="" alt="">
+      <p class="lightbox-caption" id="lb-cap"></p>
+    </div>
+  </div>
+
+  <script>
+  (function () {
+    var links = Array.from(document.querySelectorAll('.gallery-photo-link'));
+    var total = links.length;
+    var cur   = 0;
+    var lb    = document.getElementById('lb');
+    var img   = document.getElementById('lb-img');
+    var cap   = document.getElementById('lb-cap');
+    var ctr   = document.getElementById('lb-ctr');
+
+    function show(i) {
+      cur = (i + total) % total;
+      var alt = links[cur].querySelector('img').alt;
+      img.src = links[cur].href;
+      img.alt = alt;
+      cap.textContent = alt;
+      ctr.textContent = (cur + 1) + ' / ' + total;
+      lb.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function close() {
+      lb.classList.remove('is-open');
+      img.src = '';
+      document.body.style.overflow = '';
+    }
+
+    links.forEach(function (link, i) {
+      link.addEventListener('click', function (e) { e.preventDefault(); show(i); });
+    });
+
+    document.getElementById('lb-close').addEventListener('click', close);
+    document.getElementById('lb-prev').addEventListener('click', function () { show(cur - 1); });
+    document.getElementById('lb-next').addEventListener('click', function () { show(cur + 1); });
+
+    lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+
+    document.addEventListener('keydown', function (e) {
+      if (!lb.classList.contains('is-open')) return;
+      if (e.key === 'Escape')     close();
+      if (e.key === 'ArrowLeft')  show(cur - 1);
+      if (e.key === 'ArrowRight') show(cur + 1);
+    });
+  })();
+  </script>
+  {{ else }}
+  <p>No photos yet. Add images to <code>content/gallery/</code>.</p>
+  {{ end }}
+</main>
+{{ end }}

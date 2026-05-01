@@ -7,12 +7,17 @@ title = "hi! i'm declan!"
     identifier = "posts"
     name = "posts"
     url = "/posts"
+  [[menu.main]]
+    identifier = "gallery"
+    name = "gallery"
+    url = "/gallery"
 
 [module]
   [[module.imports]]
     path = "github.com/rhazdon/hugo-theme-hello-friend-ng"
     
- [params]
+[params]
+  customCSS = ["/css/gallery.css"]
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
   dateformNum     = "2006-01-02"
